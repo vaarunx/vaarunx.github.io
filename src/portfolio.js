@@ -7,9 +7,9 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Varun Rishwandh Sekar',
-  role: "Grad Student at ",
-  description:"Hi! I'm pursuing Master's in Computer Science at Northeastern University. I have a professional experience of over 15 months in software development. I'm an innovative thinker, a problem solver and I'm skilled in building apps using Java, Python, JS.",
-  resume: 'https://drive.google.com/file/d/1jfTq0LbnFmSZ5r7YgQcXiurNBPPfm6Ck/view?usp=sharing',
+  role: "Software Engineer | Distributed Systems & ML",
+  description:" Hi! I'm pursuing my Master's in Computer Science at Northeastern University (GPA 4.0). I have professional experience building scalable backend systems, distributed architectures, and AI-powered applications using Go, Java, and Python. I'm currently a Software Engineer Co-op at Dell Technologies.",
+  resume: '/resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/varunrishwandh/',
     github: 'https://github.com/vaarunx',
@@ -20,6 +20,20 @@ const about = {
 const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
+  {
+    name: 'AudioSeek | 2nd Place, MLOps Expo @ Google Cambridge',
+    description:
+      'Architected microservices on GKE with Terraform IaC, implementing VPC isolation, Secret Manager integration, and horizontal pod autoscaling handling 500+ hours of audio processing workloads. Designed an event-driven pipeline orchestrating parallel transcription jobs with automated validation checks and failure recovery, achieving 95% accuracy. Built monitoring with MLFlow, implemented CI/CD via Cloud Build, and deployed across GKE and Cloud Run.',
+    stack: ["GCP", "GKE", "Terraform", "Airflow", "Docker", "Python"],
+    sourceCode: '#',
+  },
+  {
+    name: 'Distributed AI Inference System',
+    description:
+      'Designed an event-driven inference platform processing 5000+ concurrent ML jobs using Go microservices on ECS Fargate with auto-scaling tied to SQS queue depth and fault-tolerant worker pools. Ran scalability experiments with k6/Locust demonstrating linear scaling to 16 workers, sub-second p95 latency under 200 req/s, and automatic recovery from 50% worker failure.',
+    stack: ["Go", "AWS ECS", "SQS", "DynamoDB", "Docker", "k6"],
+    sourceCode: '#',
+  },
   {
     name: 'Real-Time Content Filtering',
     description:
@@ -48,7 +62,6 @@ const projects = [
     stack: ["Google Maps API", "Google Events API", "Firebase", "Django", "React"],
     sourceCode: 'https://github.com/vaarunx/mylocality',
   },
-
   {
     name: 'A Personal News Feed',
     description:
@@ -56,7 +69,6 @@ const projects = [
     stack: ["React" , "FastAPI" , "MySQL"],
     sourceCode: 'https://github.com/thuhinkhanna/when-where-what',
   },
-
 ]
 
 const publications = [
@@ -71,25 +83,28 @@ const publications = [
 
 const workExperience = [
   {
-    name: 'Software Engineer - I',
-    company: "Mr. Cooper",
-    work_years: 'May 2023 - Present',
-    workExperiencePoints: ["Worked in developing the ruling engine and matching service for an audit application with several queues that compares extracted document data against available system data using text semantic similarity.",
-    "Engineered solutions for identifying and converting the orientation of a document in real-time, resulting in 20% reduction in processing errors.",    
-    "Reduced the dependency of manual human intervention and increased the efficiency of classifying and extracting select mortgage documents."],
+    name: 'Software Engineer Co-op',
+    company: "Dell Technologies",
+    work_years: 'Jan 2026 - June 2026',
+    workExperiencePoints: [
+      "Building the document ingestion backbone for an Agentic AI platform, enabling RAG-powered market research through automated extraction, summarization, chunking, and embedding stages across financial datasets.",
+      "Architected a modular extraction framework for 7 data sources, replacing brute-force document scanning with targeted rule-based extractors in a plug-and-play architecture with legacy fallback for backward compatibility.",
+      "Consolidated 8 sequential Airflow DAGs into a parent-child architecture with parallel execution, cutting pipeline redundancy and improving orchestration throughput across the entire ingestion layer."
+    ],
     isPublication: true,
     isWork: true,
     isEducation: false,
   },
   {
-    name: 'Graduate Intern',
+    name: 'Software Engineer',
     company: "Mr. Cooper",
-    work_years: 'Nov 2022 - April 2023',
-
-    workExperiencePoints: ["Developed the front-end website of a job portal (Naan Mudhalvan) using NuxtJS for the government of Tamil Nadu, India.", 
-      "Trained a CRF model for key information extraction and integrated these models into a Java service for enhanced data processing and page clustering;.",
-      "Increased code coverage of various Java and Python components from 0% to over 70% using JUnit and PyTest respectively."],
-    // sourceCode: 'https://github.com/funcx-faas/funcX',
+    work_years: 'Nov 2022 - August 2024',
+    workExperiencePoints: [
+      "Designed and shipped core backend services (rule engine, matching service, data APIs) for a loan audit platform that automated document verification using semantic similarity, cutting manual processing from weeks to hours.",
+      "Architected a plugin-based system for dynamic document type configuration via database, eliminating 20+ hours/month of developer effort and reducing deployment cycles from days to minutes.",
+      "Integrated LLMs for automated document annotation with human-in-the-loop verification controls, reducing dataset curation time by 70% while maintaining financial compliance standards.",
+      "Drove test coverage from 0% to 70% across production services handling millions of documents monthly. Recognized as 'Rookie of the Year' out of 100+ new hires."
+    ],
     isPublication: true,
     isWork: true,
     isEducation: false,
@@ -102,7 +117,6 @@ const workExperience = [
       "Designed and developed a Java application to present historical facts based on date and location using Wikimedia and the Bing Search API.",
       "Implemented caching to avoid redundant API calls and secured data storage with 256-bit AES encryption."
     ],
-    // sourceCode: 'https://github.com/funcx-faas/funcX',
     isPublication: true,
     isWork: true,
     isEducation: false,
@@ -110,35 +124,30 @@ const workExperience = [
   {
     name: 'Backend Developer Intern',
     company: "Grey Scientific Labs",
-    work_years: 'April 2021 - Dec 2021',
+    work_years: 'Aug 2021 – Dec 2021',
     workExperiencePoints: [
-      "Developed RESTful APIs using Django Rest Framework for the backend of a hospital management platform including a canvas area where users could annotate and led the development of a passwordless authentication service.",
-      "Deployed the backend server in an on-prem server using Proxmox and helped set up the development environment.",
-  
+      "Built RESTful APIs using Django Rest Framework for a hospital platform enabling 500+ doctors to view patient records and annotate medical images, with passwordless JWT/OTP authentication and 99.9% uptime."
     ],
-    // sourceCode: 'https://github.com/funcx-faas/funcX',
     isPublication: true,
     isWork: true,
     isEducation: false,
   }
-
-
 ]
 
 const education = [
   {
     name: 'Northeastern University',
     description: "Master's in Computer Science",
-    // gpa: "9.04 / 10",
-    years: '2024 - Present',
+    gpa: "4.00 / 4 GPA",
+    years: 'Sept 2024 - June 2026',
     isPublication: true,
     isEducation: true,
   },
   {
     name: 'Anna University',
     description: 'B.E in Computer Science and Engineering',
-    gpa: "9.04 / 10",
-    years: '2019 - 2023',
+    gpa: "3.84 / 4 GPA",
+    years: 'June 2019 - April 2023',
     isPublication: true,
     isEducation: true,
   }
@@ -148,25 +157,37 @@ const skills = {
   "Python": 90, 
   "Java": 80, 
   "JavaScript": 75,
-  "C": 60,
-  "SpringBoot": 80,
-  "Unit Tests": 80,
-  "CSS": 60,
-  "HTML": 80,
-  "Git": 80,
-  "GCP": 80,
-  "Azure": 65,
-  "Django": 85,
+  "C/C++": 60,
+  "Go": 80,
+  "Spring Boot": 80,
   "FastAPI": 90,
-  "Linux": 65,
-  "NodeJS": 75,
-  "VueJS": 60,
+  "Django": 85,
+  "Flask": 80,
+  "Node.js": 75,
+  "React": 70,
+  "Unit Tests": 80,
+  "AWS (ECS, SQS, DynamoDB, S3)": 80,
+  "GCP (GKE, Cloud Run, Composer)": 80,
+  "Docker": 85,
+  "Kubernetes": 80,
+  "Terraform": 75,
+  "Airflow": 75,
+  "Git": 80,
+  "CI/CD": 75,
   "PostgreSQL": 80,
   "MySQL": 80,
   "MongoDB": 65,
+  "BigQuery": 70,
+  "Firebase": 65,
   "Machine / Deep Learning": 65,
+  "CSS": 60,
+  "HTML": 80,
   "Kotlin": 35,
-  "Rust": 35
+  "Rust": 35,
+  "Bash": 60,
+  "Nginx": 60,
+  "gRPC": 60,
+  "GraphQL": 60
 }
 
 // const skills = [
