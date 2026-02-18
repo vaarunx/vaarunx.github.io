@@ -8,7 +8,7 @@ const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Varun Rishwandh Sekar',
   role: "Software Engineer | Distributed Systems & ML",
-  description:" Hi! I'm pursuing my Master's in Computer Science at Northeastern University (GPA 4.0). I have professional experience building scalable backend systems, distributed architectures, and AI-powered applications using Go, Java, and Python. I'm currently a Software Engineer Co-op at Dell Technologies. I will be graduating in Summer 2026 and am actively seeking full-time Software Engineer opportunities.",
+  description:" Hi! I'm pursuing my Master's in Computer Science at Northeastern University (GPA 4.0). I have professional experience building scalable backend systems, distributed architectures, and AI-powered applications using Go, Java, and Python. I'm currently a Software Engineer Co-op at Dell Technologies. I will be graduating in Summer 2026 and am actively seeking full-time Software Engineer opportunities across the US.",
   resume: '/resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/varunrishwandh/',
